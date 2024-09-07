@@ -25,6 +25,7 @@ function merge(left, right) {
             j++;
         }
     }
+    
 
     // Add remaining elements from left or right arrays
     return result.concat(left.slice(i)).concat(right.slice(j));
