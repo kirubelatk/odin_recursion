@@ -8,7 +8,7 @@ function mergeSort(arr) {
     let left = arr.slice(0, mid);  // Divide the array into left half
     let right = arr.slice(mid);    // Divide the array into right half
 
-    return merge(mergeSort(left), mergeSort(right));  // Recursively sort and merge the halves
+    return merge(mergeSort(left), mergeSort(right));  
 }
 
 function merge(left, right) {
@@ -25,10 +25,11 @@ function merge(left, right) {
             j++;
         }
     }
-    
+
 
     // Add remaining elements from left or right arrays
     return result.concat(left.slice(i)).concat(right.slice(j));
 }
 
 console.log(mergeSort([3, 1, 4, 1, 5, 9, 2, 6]));  // Output: [1, 1, 2, 3, 4, 5, 6, 9]
+console.log(mergeSort([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));  // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
